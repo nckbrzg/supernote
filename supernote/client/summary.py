@@ -72,7 +72,7 @@ class SummaryClient:
 
     async def update_summary(self, dto: UpdateSummaryDTO) -> BaseResponse:
         """Update an existing summary."""
-        return await self._client.post_json(
+        return await self._client.put_json(
             "/api/file/update/summary", BaseResponse, json=dto.to_dict()
         )
 

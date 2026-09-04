@@ -127,9 +127,9 @@ async def handle_add_summary(request: web.Request) -> web.Response:
         return SupernoteError.uncaught(err).to_response()
 
 
-@routes.post("/api/file/update/summary")
+@routes.put("/api/file/update/summary")
 async def handle_update_summary(request: web.Request) -> web.Response:
-    # Endpoint: POST /api/file/update/summary
+    # Endpoint: PUT /api/file/update/summary
     # Purpose: Update an existing summary.
     # Response: BaseResponse
     req_data = UpdateSummaryDTO.from_dict(await request.json())
