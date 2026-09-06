@@ -260,7 +260,7 @@ async def test_summary_route_error_handling(
             {"name": "g", "uniqueIdentifier": "u", "md5Hash": "h"},
         ),
         (
-            "POST",
+            "PUT",
             "/api/file/update/summary/group",
             {"id": 1, "name": "g", "uniqueIdentifier": "u", "md5Hash": "h"},
         ),

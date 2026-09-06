@@ -213,9 +213,9 @@ async def handle_add_summary_group(request: web.Request) -> web.Response:
         return SupernoteError.uncaught(err).to_response()
 
 
-@routes.post("/api/file/update/summary/group")
+@routes.put("/api/file/update/summary/group")
 async def handle_update_summary_group(request: web.Request) -> web.Response:
-    # Endpoint: POST /api/file/update/summary/group
+    # Endpoint: PUT /api/file/update/summary/group
     # Purpose: Update an existing summary group.
     # Response: BaseResponse
     req_data = UpdateSummaryGroupDTO.from_dict(await request.json())
